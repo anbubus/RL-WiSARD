@@ -1,0 +1,29 @@
+Failure # 1 (occurred at 2026-03-09_19-26-05)
+The actor died because of an error raised in its creation task, [36mray::PPO.__init__()[39m (pid=17552, ip=127.0.0.1, actor_id=bc0d7eced0fbbc803aac1c4301000000, repr=PPO)
+  File "python\\ray\\_raylet.pyx", line 1818, in ray._raylet.execute_task
+  File "python\\ray\\_raylet.pyx", line 1761, in ray._raylet.execute_task.function_executor
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\_private\function_manager.py", line 704, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\util\tracing\tracing_helper.py", line 461, in _resume_span
+    return method(self, *_args, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\rllib\algorithms\algorithm.py", line 583, in __init__
+    super().__init__(
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\tune\trainable\trainable.py", line 158, in __init__
+    self.setup(copy.deepcopy(self.config))
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\util\tracing\tracing_helper.py", line 461, in _resume_span
+    return method(self, *_args, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\rllib\algorithms\algorithm.py", line 849, in setup
+    self.env_runner_group = EnvRunnerGroup(
+                            ^^^^^^^^^^^^^^^
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\rllib\env\env_runner_group.py", line 197, in __init__
+    self._setup(
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\rllib\env\env_runner_group.py", line 285, in _setup
+    spaces = self.get_spaces()
+             ^^^^^^^^^^^^^^^^^
+  File "g:\Documentos\codes\IC_codes_studies\NTN_katopodis\ntnvenv\Lib\site-packages\ray\rllib\env\env_runner_group.py", line 313, in get_spaces
+    spaces = self.foreach_env_runner(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
