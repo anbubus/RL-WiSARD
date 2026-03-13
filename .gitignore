@@ -1,0 +1,11 @@
+﻿.env
+.env.*
+.env.local
+__pycache__/
+*.py[cod]
+*.pyo
+experiments/
+**/experiments/
+ntnvenv/
+venv/
+.venv/
